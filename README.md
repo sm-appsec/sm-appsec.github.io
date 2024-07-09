@@ -1,4 +1,13 @@
-# Create github Page
-https://pages.github.com/
+### SmAppsec Helm charts
 
-helm repo index . --url https://sm-appsec.github.io/sm-appsec.github.io
+
+
+# Add Repo
+helm repo add my-charts https://sm-appsec.github.io
+
+# Install repo
+helm install <release-name> <repo-name>/smappsec --namespace <namespace>
+
+helm repo list
+
+helm install linsan my-charts/smappsec --namespace <namespace>
