@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  GUI_URL: {{ .Values.guiUrl | quote }}
+  API_URL: {{ .Values.apiUrl | quote }}
+  CORS_ORIGINS: {{ .Values.corsOrigins | quote }}

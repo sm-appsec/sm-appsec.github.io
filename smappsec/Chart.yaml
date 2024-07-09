@@ -1,0 +1,6 @@
+apiVersion: v2
+name: smappsec
+description: A Helm chart for SmAppSec
+version: 0.1.0
+appVersion: "0.1"
+icon: "https://firebasestorage.googleapis.com/v0/b/smappsec-fff6c.appspot.com/o/security-mindset.png?alt=media&token=9f834c3b-d36b-4b1a-ab67-c3ca44de1ef6"

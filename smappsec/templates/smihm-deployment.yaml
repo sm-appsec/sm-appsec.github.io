@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-smihm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-smihm
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-smihm
+    spec:
+      containers:
+        - name: smihm
+          image: {{ .Values.images.smihm }}
+          ports:
+            - containerPort: 80
+          env:
+            - name: API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: API_URL
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secret
+                  key: API_KEY

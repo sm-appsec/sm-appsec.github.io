@@ -1,0 +1,54 @@
+images:
+  redis: "redis:latest"
+  smapi: "ghcr.io/sm-appsec/smapi:0.1"
+  smihm: "ghcr.io/sm-appsec/smihm:0.1"
+  db: "postgres:12.1-alpine"
+  pgadmin: "dpage/pgadmin4"
+  
+ingress:
+  enabled: true
+  className: ""
+  annotations: {}
+  hosts:
+    - host: "redis.local"
+      paths:
+        - path: "/"
+          pathType: "ImplementationSpecific"
+          port: 6379
+    - host: "smapi.local"
+      paths:
+        - path: "/"
+          pathType: "ImplementationSpecific"
+          port: 8000
+    - host: "smihm.local"
+      paths:
+        - path: "/"
+          pathType: "ImplementationSpecific"
+          port: 80
+    - host: "db.local"
+      paths:
+        - path: "/"
+          pathType: "ImplementationSpecific"
+          port: 5432
+    - host: "pgadmin.local"
+      paths:
+        - path: "/"
+          pathType: "ImplementationSpecific"
+          port: 80
+
+guiUrl: "http://localhost:8002"
+apiUrl: "http://localhost:8002/api"
+corsOrigins: "*"
+
+databaseUrl: "postgres://user:password@localhost:5432/dbname"
+apiKey: "your_api_key"
+rootEmail: "root@example.com"
+rootPassword: "password"
+rootTel: "123456789"
+smtpHost: "smtp.example.com"
+smtpPort: "587"
+smtpUser: "smtp_user"
+smtpPassword: "smtp_password"
+emailFrom: "no-reply@example.com"
+pgadminDefaultEmail: "admin@example.com"
+pgadminDefaultPassword: "admin_password"
