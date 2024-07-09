@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  smappsec:
+  - apiVersion: v2
+    appVersion: "0.1"
+    created: "2024-07-09T18:17:44.04241953+02:00"
+    description: A Helm chart for SmAppSec
+    digest: 9b0772ca25ca643296a02f53771ad132d9e3fc61744a3746db77955a25de8763
+    icon: https://firebasestorage.googleapis.com/v0/b/smappsec-fff6c.appspot.com/o/security-mindset.png?alt=media&token=9f834c3b-d36b-4b1a-ab67-c3ca44de1ef6
+    name: smappsec
+    urls:
+    - https://github.com/sm-appsec/chart-helm/charts/smappsec-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-07-09T18:17:44.041381717+02:00"
